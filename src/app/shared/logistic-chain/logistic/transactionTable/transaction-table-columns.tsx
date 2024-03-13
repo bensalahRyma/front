@@ -150,7 +150,7 @@ const statusColors = (status: StatusType) => {
             placement="top"
             color="invert"
           >
-                <Link href={routes.transaction.transactionDetails(row.id)}>
+                 <Link href={routes.logistic.logisticDetails(row.id)}>
             {/* <ActionIcon
               as="span"
               size="sm"
