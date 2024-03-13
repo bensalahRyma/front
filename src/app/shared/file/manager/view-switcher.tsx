@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback ,Suspense } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { ActionIcon } from 'rizzui';
 import cn from '@/utils/class-names';
@@ -26,7 +26,9 @@ export default function ViewSwitcher() {
   };
 
   return (
-    <div className="flex items-center gap-2 rounded-lg border border-muted p-1.5 px-1.5">
+   
+ <div className="flex items-center gap-2 rounded-lg border border-muted p-1.5 px-1.5">
+   <Suspense >
       <ActionIcon
         size="sm"
         variant="flat"
@@ -59,6 +61,9 @@ export default function ViewSwitcher() {
           )}
         />
       </ActionIcon>
+      </Suspense>
     </div>
+   
+   
   );
 }

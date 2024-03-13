@@ -1,6 +1,6 @@
 'use client';
 
-import { useTransition } from 'react';
+import { Suspense, useTransition } from 'react';
 import { atom, useAtom, useSetAtom } from 'jotai';
 import { usePathname, useRouter } from 'next/navigation';
 import { Badge, Input } from 'rizzui';
@@ -57,15 +57,21 @@ export function TabList() {
   return (
     <SimpleBar>
       <nav className="flex items-center gap-5 border-b border-gray-300">
+      <Suspense>
         {supportNavItems.map((nav) => (
-          <TabButton
+       
+         <TabButton
             item={nav}
             key={nav.value}
             isActive={tab === nav.value}
             onClick={() => selectTab(nav.value)}
             disabled={isPending}
           />
+
+      
+       
         ))}
+              </Suspense>
             
       </nav>
     </SimpleBar>
@@ -111,6 +117,7 @@ export function TabButton({
 
   return (
     <>
+     <Suspense >
      <button
       className={cn(
         'relative flex items-center gap-2 py-2 text-sm outline-none',
@@ -132,6 +139,8 @@ export function TabButton({
         )}
       />
     </button>
+     </Suspense>
+    
 
   
     </>

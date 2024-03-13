@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useFilterControls } from '@/hooks/use-filter-control';
 import { useSearchParams } from 'next/navigation';
 import NFTFilterDropdown from '@/app/shared/explore-nft/nft-filter-dropdown';
@@ -25,30 +25,32 @@ export default function NFTFilter() {
   }, [searchParams]);
 
   return (
-    <div
-      className={cn(
-        'flex items-center justify-end gap-5 @[60rem]:mb-6 @[60rem]:justify-between'
-      )}
-    >
-      <NFTFilterTags className="hidden @[60rem]:flex" />
-      <div className="flex items-center gap-3">
-        {hasQueryParams && (
-          <Button
-            type="button"
-            className="hidden h-[42px] rounded-full @[60rem]:flex"
-            variant="flat"
-            onClick={() => reset()}
-          >
-            <PiTrashDuotone className="me-2 h-5 w-5" />
-            Clear
-          </Button>
+    <Suspense fallback={<div>Loading...</div>}> {/* Wrap your component with Suspense */}
+      <div
+        className={cn(
+          'flex items-center justify-end gap-5 @[60rem]:mb-6 @[60rem]:justify-between'
         )}
-        <NFTFilterDropdown
-          className="ms-auto hidden rounded-full @[60rem]:flex"
-          state={state}
-          applyFilter={applyFilter}
-        />
+      >
+        <NFTFilterTags className="hidden @[60rem]:flex" />
+        <div className="flex items-center gap-3">
+          {hasQueryParams && (
+            <Button
+              type="button"
+              className="hidden h-[42px] rounded-full @[60rem]:flex"
+              variant="flat"
+              onClick={() => reset()}
+            >
+              <PiTrashDuotone className="me-2 h-5 w-5" />
+              Clear
+            </Button>
+          )}
+          <NFTFilterDropdown
+            className="ms-auto hidden rounded-full @[60rem]:flex"
+            state={state}
+            applyFilter={applyFilter}
+          />
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }
