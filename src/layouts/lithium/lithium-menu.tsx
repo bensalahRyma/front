@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { PiCaretDownBold } from 'react-icons/pi';
 import cn from '@/utils/class-names';
 import { ForwardedRef, forwardRef, useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import BulletIcon from '@/layouts/lithium/bullet-icon';
 import { AiFillCaretRight } from 'react-icons/ai';
-import NavMenu from '@/layouts/nav-menu/nav-menu';
+// import NavMenu from '@/layouts/nav-menu/nav-menu';
 import {
   DropdownItemType,
   LithiumMenuItemsKeys,
@@ -17,7 +17,7 @@ import { usePathname } from 'next/navigation';
 import { LithiumMenuIconType, lithiumMenuIcons } from './lithium-menu-icons';
 import { useActivePathname } from '@/utils/use-pathname-active';
 import { useDirection } from '@/hooks/use-direction';
-import { NavMenuDirection } from '../nav-menu/nav-menu-types';
+// import { NavMenuDirection } from '../nav-menu/nav-menu-types';
 
 function EnhancedMenuItems({
   items,
@@ -43,38 +43,40 @@ function EnhancedMenuItems({
           items[currentState]?.subMenuItems?.map((item, index) => {
             const isActive = pathname === item.href;
             return (
-              <motion.li
-                style={{ transformOrigin: 'center' }}
-                initial={{ opacity: 0, scale: 0.75 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.2, delay: index * 0.075 }}
-                className="basis-1/2 text-left"
-                key={`enhance-menu-item-${item.name}-${index}`}
-              >
-                <Link
-                  href={item.href ?? '/'}
-                  className="group/submenu-link flex items-center gap-3 font-medium text-gray-900"
-                >
-                  <span
-                    className={cn(
-                      'text-gray-500 duration-200 group-hover/submenu-link:text-gray-900',
-                      {
-                        'text-gray-900': isActive,
-                      }
-                    )}
-                  >
-                    <BulletIcon className="h-3 w-3" />
-                  </span>
-                  <span
-                    className={cn('duration-200 ', {
-                      'group-hover/submenu-link:translate-x-1': !isActive,
-                      underline: isActive,
-                    })}
-                  >
-                    {item.name}
-                  </span>
-                </Link>
-              </motion.li>
+              <>
+              </>
+              // <motion.li
+              //   style={{ transformOrigin: 'center' }}
+              //   initial={{ opacity: 0, scale: 0.75 }}
+              //   animate={{ opacity: 1, scale: 1 }}
+              //   transition={{ duration: 0.2, delay: index * 0.075 }}
+              //   className="basis-1/2 text-left"
+              //   key={`enhance-menu-item-${item.name}-${index}`}
+              // >
+              //   <Link
+              //     href={item.href ?? '/'}
+              //     className="group/submenu-link flex items-center gap-3 font-medium text-gray-900"
+              //   >
+              //     <span
+              //       className={cn(
+              //         'text-gray-500 duration-200 group-hover/submenu-link:text-gray-900',
+              //         {
+              //           'text-gray-900': isActive,
+              //         }
+              //       )}
+              //     >
+              //       <BulletIcon className="h-3 w-3" />
+              //     </span>
+              //     <span
+              //       className={cn('duration-200 ', {
+              //         'group-hover/submenu-link:translate-x-1': !isActive,
+              //         underline: isActive,
+              //       })}
+              //     >
+              //       {item.name}
+              //     </span>
+              //   </Link>
+              // </motion.li>
             );
           })}
       </ul>
@@ -112,62 +114,64 @@ export const EnhancedMenu = forwardRef(
       }
     }, [items, pathname]);
     return (
-      <motion.div
-        key="enhanced-menu"
-        initial={{ opacity: 0, scale: 0.75 }}
-        transition={{ duration: 0.1 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, transition: { duration: 0.2 } }}
-        className={cn('flex gap-x-2 p-1 pb-1.5 pe-1.5', className)}
-      >
-        <div className="col-span-3 flex w-[200px] flex-col gap-2 pe-0">
-          {items.map((item, index) => {
-            const Icon = lithiumMenuIcons?.[item.icon as LithiumMenuIconType];
-            return (
-              <button
-                role="div"
-                key={`link-menu-${item.name}-${index}`}
-                className={cn(
-                  'relative cursor-pointer rounded-lg p-3 pb-2.5 text-left font-medium text-gray-900 duration-200',
-                  {
-                    'bg-white dark:bg-gray-100': currentState === index,
-                  }
-                )}
-                onClick={() => setState(index)}
-              >
-                <div className="mb-2 flex items-center gap-2">
-                  <Icon className="h-5 w-5" />
-                  <span>{item.name}</span>
-                </div>
-                <p className="text-xs font-normal leading-5 text-gray-500">
-                  {item?.description}
-                </p>
-                <span
-                  className={cn(
-                    'absolute -end-[9px]  top-1/2 -translate-y-1/2 text-white opacity-0 duration-200 rtl:rotate-180 dark:text-gray-100',
-                    {
-                      'opacity-100': currentState === index,
-                    }
-                  )}
-                >
-                  <AiFillCaretRight className="h-auto w-3.5" />
-                </span>
-                <span
-                  className={cn(
-                    'absolute -end-[17px] top-1/2 -translate-y-1/2 text-gray-50  opacity-0 duration-200 rtl:rotate-180 dark:text-gray-0',
-                    {
-                      'opacity-100': currentState === index,
-                    }
-                  )}
-                >
-                  <AiFillCaretRight className="h-auto w-3.5" />
-                </span>
-              </button>
-            );
-          })}
-        </div>
-        <EnhancedMenuItems items={items} currentState={currentState} />
-      </motion.div>
+      <>
+      </>
+      // <motion.div
+      //   key="enhanced-menu"
+      //   initial={{ opacity: 0, scale: 0.75 }}
+      //   transition={{ duration: 0.1 }}
+      //   animate={{ opacity: 1, scale: 1 }}
+      //   exit={{ opacity: 0, transition: { duration: 0.2 } }}
+      //   className={cn('flex gap-x-2 p-1 pb-1.5 pe-1.5', className)}
+      // >
+      //   <div className="col-span-3 flex w-[200px] flex-col gap-2 pe-0">
+      //     {items.map((item, index) => {
+      //       const Icon = lithiumMenuIcons?.[item.icon as LithiumMenuIconType];
+      //       return (
+      //         <button
+      //           role="div"
+      //           key={`link-menu-${item.name}-${index}`}
+      //           className={cn(
+      //             'relative cursor-pointer rounded-lg p-3 pb-2.5 text-left font-medium text-gray-900 duration-200',
+      //             {
+      //               'bg-white dark:bg-gray-100': currentState === index,
+      //             }
+      //           )}
+      //           onClick={() => setState(index)}
+      //         >
+      //           <div className="mb-2 flex items-center gap-2">
+      //             <Icon className="h-5 w-5" />
+      //             <span>{item.name}</span>
+      //           </div>
+      //           <p className="text-xs font-normal leading-5 text-gray-500">
+      //             {item?.description}
+      //           </p>
+      //           <span
+      //             className={cn(
+      //               'absolute -end-[9px]  top-1/2 -translate-y-1/2 text-white opacity-0 duration-200 rtl:rotate-180 dark:text-gray-100',
+      //               {
+      //                 'opacity-100': currentState === index,
+      //               }
+      //             )}
+      //           >
+      //             <AiFillCaretRight className="h-auto w-3.5" />
+      //           </span>
+      //           <span
+      //             className={cn(
+      //               'absolute -end-[17px] top-1/2 -translate-y-1/2 text-gray-50  opacity-0 duration-200 rtl:rotate-180 dark:text-gray-0',
+      //               {
+      //                 'opacity-100': currentState === index,
+      //               }
+      //             )}
+      //           >
+      //             <AiFillCaretRight className="h-auto w-3.5" />
+      //           </span>
+      //         </button>
+      //       );
+      //     })}
+      //   </div>
+      //   <EnhancedMenuItems items={items} currentState={currentState} />
+      // </motion.div>
     );
   }
 );
@@ -213,7 +217,7 @@ export default function HeaderMenuLeft() {
   const { direction } = useDirection();
   return (
     <>
-      <NavMenu
+      {/* <NavMenu
         dir={direction as NavMenuDirection}
         menuClassName="pb-5 top-3 gap-8 relative"
         menuContentClassName="mt-2 border border-gray-200 dark:border-gray-300"
@@ -309,7 +313,7 @@ export default function HeaderMenuLeft() {
             </div>
           </NavMenu.Content>
         </NavMenu.Item>
-      </NavMenu>
+      </NavMenu> */}
     </>
   );
 }

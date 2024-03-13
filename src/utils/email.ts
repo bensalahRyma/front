@@ -2,8 +2,8 @@ import 'server-only';
 
 import nodemailer from 'nodemailer';
 
-import { env } from '@/env.mjs';
-import { MAIL } from '@/config/mail';
+// import { env } from '@/env.mjs';
+// import { MAIL } from '@/config/mail';
 import { messages } from '@/config/messages';
 
 type EmailPayload = {
@@ -13,15 +13,15 @@ type EmailPayload = {
 };
 
 export const sendEmail = async (data: EmailPayload) => {
-  const transporter = nodemailer.createTransport({
-    ...MAIL,
-  });
+  // const transporter = nodemailer.createTransport({
+  //   ...MAIL,
+  // });
 
   try {
-    await transporter.sendMail({
-      from: `Isomorphic Furyroad<${env.SMTP_FROM_EMAIL}>`,
-      ...data,
-    });
+    // await transporter.sendMail({
+    //   from: `Isomorphic Furyroad<${env.SMTP_FROM_EMAIL}>`,
+    //   ...data,
+    // });
     return true;
   } catch (error: any) {
     throw new Error(messages.errorSendingEmail);
@@ -37,13 +37,13 @@ type MessageEmailPayload = {
 };
 
 export const sendMessageEmail = async (data: MessageEmailPayload) => {
-  const transporter = nodemailer.createTransport({
-    ...MAIL,
-  });
+  // const transporter = nodemailer.createTransport({
+  //   ...MAIL,
+  // });
   try {
-    transporter.sendMail({
-      ...data,
-    });
+    // transporter.sendMail({
+    //   ...data,
+    // });
     return true;
   } catch (error: any) {
     throw new Error(messages.errorSendingEmail);

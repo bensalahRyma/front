@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-import { Element } from 'react-scroll';
+// import { Element } from 'react-scroll';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { SubmitHandler, useForm, FormProvider } from 'react-hook-form';
 import FormFooter from '@/components/form-footer';
@@ -74,14 +74,14 @@ export default function CreateEditShipment({
           onSubmit={methods.handleSubmit(onSubmit)}
         >
           <div className="mb-10 grid gap-7 divide-y divide-dashed divide-gray-200 @2xl:gap-9 @3xl:gap-11">
-            {Object.entries(MAP_STEP_TO_COMPONENT).map(([key, Component]) => (
+            {/* {Object.entries(MAP_STEP_TO_COMPONENT).map(([key, Component]) => (
               <Element
                 key={key}
                 name={FormParts[key as keyof typeof FormParts]}
               >
                 <Component className="pt-7 @2xl:pt-9 @3xl:pt-11" />
               </Element>
-            ))}
+            ))} */}
           </div>
           <FormFooter
             isLoading={isLoading}

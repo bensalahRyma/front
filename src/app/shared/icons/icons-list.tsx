@@ -7,7 +7,7 @@ import { routes } from '@/config/routes';
 import PageHeader from '@/app/shared/page-header';
 import { Input, Empty, EmptyProductBoxIcon } from 'rizzui';
 import cn from '@/utils/class-names';
-import SVGLoader from '@/components/svg-loader';
+// import SVGLoader from '@/components/svg-loader';
 import { iconsData } from '@/data/icons-data';
 import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard';
 
@@ -132,7 +132,7 @@ function IconCard({ name, file }: { name: string; file: string }) {
             '!border-gray-900 ring-1 ring-gray-900 dark:!border-gray-900 dark:ring-gray-300'
         )}
       >
-        <SVGLoader fileName={file} />
+        {/* <SVGLoader fileName={file} /> */}
       </div>
       <div
         className={cn(

@@ -7,15 +7,15 @@ import {
   typeOption,
 } from '@/app/shared/ecommerce/product/create-edit/form-utils';
 import dynamic from 'next/dynamic';
-import SelectLoader from '@/components/loader/select-loader';
-import QuillLoader from '@/components/loader/quill-loader';
+// import SelectLoader from '@/components/loader/select-loader';
+// import QuillLoader from '@/components/loader/quill-loader';
 const Select = dynamic(() => import('rizzui').then((mod) => mod.Select), {
   ssr: false,
-  loading: () => <SelectLoader />,
+  //loading: () => <SelectLoader />,
 });
 const QuillEditor = dynamic(() => import('@/components/ui/quill-editor'), {
   ssr: false,
-  loading: () => <QuillLoader className="col-span-full h-[143px]" />,
+ // loading: () => <QuillLoader className="col-span-full h-[143px]" />,
 });
 
 export default function ProductSummary({ className }: { className?: string }) {

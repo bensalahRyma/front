@@ -32,11 +32,11 @@ export const lithiumMenuItems: LithiumMenuItem = {
         href: '/',
         icon: 'FilesIcon',
       },
-      {
-        name: 'Appointment',
-        href: routes.appointment.dashboard,
-        icon: 'ScheduleIcon',
-      },
+      // {
+      //   name: 'Appointment',
+      //   href: routes.appointment.dashboard,
+      //   icon: 'ScheduleIcon',
+      // },
       {
         name: 'Executive',
         href: routes.executive.dashboard,

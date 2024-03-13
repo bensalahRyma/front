@@ -1,4 +1,4 @@
-import { PortalProps } from '@/components/Portal';
+// import { PortalProps } from '@/components/Portal';
 import { FloatingPosition } from '@/components/ui/menu/popover/types';
 import { PopoverWidth } from '@/components/ui/menu/popover/use-popover';
 import { createContextHook } from '@/components/ui/menu/popover/create-custom-context';
@@ -13,7 +13,7 @@ interface PopoverContextProps {
   trapFocus: boolean | undefined;
   placement: FloatingPosition;
   withinPortal: boolean | undefined;
-  portalProps?: Omit<PortalProps, 'children'>;
+  // portalProps?: Omit<PortalProps, 'children'>;
   onClose?: () => void;
   getDropdownId: () => string;
   getTargetId: () => string;

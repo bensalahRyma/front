@@ -13,19 +13,19 @@ import GetSize from '@/app/shared/ecommerce/product/get-size';
 import { calculatePercentage } from '@/utils/calculate-percentage';
 import { GetColor } from '@/app/shared/ecommerce/product/get-color';
 import WishlistButton from '@/app/shared/ecommerce/product/wishlist-button';
-import { useCart } from '@/store/quick-cart/cart.context';
+// import { useCart } from '@/store/quick-cart/cart.context';
 import {
   ProductDetailsInput,
   productDetailsSchema,
 } from '@/utils/validators/product-details.schema';
-import { generateCartProduct } from '@/store/quick-cart/generate-cart-product';
+// import { generateCartProduct } from '@/store/quick-cart/generate-cart-product';
 
 export default function ProductDetailsSummery({
   product,
 }: {
   product: Product;
 }) {
-  const { addItemToCart } = useCart();
+  // const { addItemToCart } = useCart();
   const [isLoading, setLoading] = useState(false);
 
   const methods = useForm<ProductDetailsInput>({
@@ -35,17 +35,17 @@ export default function ProductDetailsSummery({
   });
 
   const onSubmit: SubmitHandler<ProductDetailsInput> = (data) => {
-    const item = generateCartProduct({
-      ...product,
-      color: data.productColor,
-      size: data.productSize,
-    });
+    // const item = generateCartProduct({
+    //   ...product,
+    //   color: data.productColor,
+    //   size: data.productSize,
+    // });
 
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
       console.log('createOrder data ->', data);
-      addItemToCart(item, 1);
+      // addItemToCart(item, 1);
       toast.success(<Text as="b">Product added to the cart</Text>);
     }, 600);
   };

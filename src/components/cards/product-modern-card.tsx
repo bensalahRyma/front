@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { routes } from '@/config/routes';
 import { Title, Text } from 'rizzui';
 import cn from '@/utils/class-names';
-import WishlistButton from '@/components/wishlist-button';
+// import WishlistButton from '@/components/wishlist-button';
 import { generateSlug } from '@/utils/generate-slug';
 import ColorSwatch from '@/utils/color-swatch';
 import { Product } from '@/types';
@@ -42,7 +42,7 @@ export default function ProductModernCard({
             className="h-full w-full object-cover"
           />
         </div>
-        <WishlistButton className="absolute end-3 top-3" />
+        {/* <WishlistButton className="absolute end-3 top-3" /> */}
       </div>
 
       <div className="pt-3">

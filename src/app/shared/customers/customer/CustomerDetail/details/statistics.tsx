@@ -120,7 +120,7 @@ const seenon=[
 ]
 interface Order {
     id: string;
-    date: Date;
+    date: string;
     amount: string;
   }
   
@@ -262,7 +262,7 @@ const [selectedDate, setSelectedDate] = useState<Date | null>(null);
       <div className="  ">
     <DatePicker
     className="mb-4"
-        as="span"
+       // as="span"
         selected={selectedDate}
         onChange={handleDateChange}
         placeholderText="Select a date"
@@ -285,7 +285,7 @@ const [selectedDate, setSelectedDate] = useState<Date | null>(null);
                 as="span"
                 className="font-lexend text-sm font-medium text-gray-900 dark:text-gray-700"
               >
-                 {formatDate((item?.date), 'MMMM D, YYYY')}
+                 {((item?.date), 'MMMM D, YYYY')}
             
               </Text>
             </div>

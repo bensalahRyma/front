@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import ReactPlayer from 'react-player/lazy';
+// import ReactPlayer from 'react-player/lazy';
 import {
   Swiper,
   SwiperSlide,
@@ -101,7 +101,7 @@ function ModalCardSlider({ data }: any) {
 function ModalCardVideo({ data }: any) {
   return (
     <div className="flex h-full items-center bg-black dark:bg-gray-50">
-      <ReactPlayer url={data.video.link} controls width="100%" />
+      {/* <ReactPlayer url={data.video.link} controls width="100%" /> */}
     </div>
   );
 }

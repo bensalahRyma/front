@@ -35,7 +35,7 @@ export default function CustomerDetail() {
 useEffect(()=>{
  console.log("--customer",customer);
  
-},[])
+},[customer])
   return (
     <div className="@container">
  

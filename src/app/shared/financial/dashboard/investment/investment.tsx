@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { DatePicker } from '@/components/ui/datepicker';
 import WidgetCard from '@/components/cards/widget-card';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import {
   CircleTextType,
   CustomCircleChartDataType,
@@ -83,7 +83,7 @@ function CustomCircleChart({ data, circleTextType }: CustomCircleChartProps) {
 
   return (
     <>
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
@@ -101,7 +101,7 @@ function CustomCircleChart({ data, circleTextType }: CustomCircleChartProps) {
             nth={(i + 1) as NthType}
           />
         ))}
-      </motion.div>
+      </motion.div> */}
       <div className="flex flex-col flex-wrap justify-center gap-2 text-sm text-gray-500 @[24rem]:mx-auto @[24rem]:flex-row @[24rem]:gap-x-6 @[24rem]:gap-y-3">
         {sortedData.map((item, i) => (
           <div className="flex items-center gap-1" key={item.label + i}>

@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { SubmitHandler, Controller } from 'react-hook-form';
-import SelectLoader from '@/components/loader/select-loader';
-import QuillLoader from '@/components/loader/quill-loader';
+// import SelectLoader from '@/components/loader/select-loader';
+// import QuillLoader from '@/components/loader/quill-loader';
 import { Button, Input, Text, Title } from 'rizzui';
 import cn from '@/utils/class-names';
 import { Form } from '@/components/ui/form';
@@ -15,11 +15,11 @@ import {
 import UploadZone from '@/components/ui/file-upload/upload-zone';
 const Select = dynamic(() => import('rizzui').then((mod) => mod.Select), {
   ssr: false,
-  loading: () => <SelectLoader />,
+  // loading: () => <SelectLoader />,
 });
 const QuillEditor = dynamic(() => import('@/components/ui/quill-editor'), {
   ssr: false,
-  loading: () => <QuillLoader className="col-span-full h-[168px]" />,
+  // loading: () => <QuillLoader className="col-span-full h-[168px]" />,
 });
 
 // Parent category option

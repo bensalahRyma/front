@@ -31,7 +31,7 @@ export default function TransactionnumberLookup({
             setSearchError(true);
           } else {
             // Utilisateur trouvé, définir les résultats de recherche et réinitialiser l'état de l'erreur de recherche
-            setSearchResult(result);
+            // setSearchResult(result);
             handleButtonClick()
             setSearchError(false);
             //redirection vers transaction details

@@ -11,11 +11,11 @@ import {
   productVariants,
 } from '@/app/shared/ecommerce/product/create-edit/form-utils';
 import TrashIcon from '@/components/icons/trash';
-import SelectLoader from '@/components/loader/select-loader';
+// import SelectLoader from '@/components/loader/select-loader';
 import { PiPlusBold } from 'react-icons/pi';
 const Select = dynamic(() => import('rizzui').then((mod) => mod.Select), {
   ssr: false,
-  loading: () => <SelectLoader />,
+  // loading: () => < />,
 });
 
 export default function ProductVariants({ className }: { className?: string }) {

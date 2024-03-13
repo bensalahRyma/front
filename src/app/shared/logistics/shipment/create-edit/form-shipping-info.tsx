@@ -1,7 +1,7 @@
 import { Controller, useFormContext } from 'react-hook-form';
 import FormGroup from '@/app/shared/form-group';
 import { Select } from 'rizzui';
-import NoSSR from '@/components/no-ssr';
+// mport NoSSR from '@/components/no-ssr';i
 import FileInput from '@/app/shared/logistics/shipment/create-edit/file-input';
 import {
   offices,
@@ -26,7 +26,7 @@ export default function FormShippingInfo() {
       title="Shipping Info"
       description="Add necessary shipping information here"
     >
-      <NoSSR>
+      {/* <NoSSR> */}
         <Controller
           control={control}
           name="country"
@@ -168,7 +168,7 @@ export default function FormShippingInfo() {
             />
           )}
         />
-      </NoSSR>
+      {/* </NoSSR> */}
       <UploadZone
         name="shippingInfoAttachment"
         className="col-span-full"

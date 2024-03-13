@@ -3,7 +3,7 @@
 import { Button, Title, Tooltip } from 'rizzui';
 import cn from '@/utils/class-names';
 import { PiPlusLight } from 'react-icons/pi';
-import Calendar from 'react-calendar';
+// import Calendar from 'react-calendar';
 import { useState } from 'react';
 import 'react-calendar/dist/Calendar.css';
 
@@ -53,13 +53,13 @@ export default function ScheduleList({ className }: { className?: string }) {
         >
           Schedule list
         </Title>
-        <Calendar
+        {/* <Calendar
           onChange={onChange}
           value={value}
           prev2Label={false}
           next2Label={false}
           className="!w-full !border-0 !bg-transparent !font-inter !text-base"
-        />
+        /> */}
       </div>
       <div className="flex flex-col justify-between bg-gray-50 px-5 py-7 @lg:w-2/5 dark:bg-gray-100">
         <div className="mb-10 space-y-6 @lg:pt-2">

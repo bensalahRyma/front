@@ -3,8 +3,6 @@
 import Image from 'next/image';
 import cn from '@/utils/class-names';
 import NewsLetterForm from '@/app/shared/newsletter/newsletter-6/newsletter-form';
-import newsletterImg from '@public/newsletter-6.jpg';
-import newsletterImgDark from '@public/newsletter-6-dark.jpg';
 
 export default function NewsLetter({ className }: { className?: string }) {
   return (
@@ -16,7 +14,7 @@ export default function NewsLetter({ className }: { className?: string }) {
     >
       <div className="relative col-span-3 hidden aspect-[36/45] @[674px]:inline-block">
         <Image
-          src={newsletterImg}
+          src={''}
           alt="newsletter"
           fill
           priority
@@ -24,7 +22,7 @@ export default function NewsLetter({ className }: { className?: string }) {
           className="visible rounded-lg dark:invisible"
         />
         <Image
-          src={newsletterImgDark}
+          src={''}
           alt="newsletter"
           fill
           priority

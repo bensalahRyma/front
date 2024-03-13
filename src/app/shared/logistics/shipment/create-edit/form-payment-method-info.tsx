@@ -2,7 +2,7 @@ import { PiCheckCircleFill } from 'react-icons/pi';
 import { Controller, useFormContext } from 'react-hook-form';
 import { Select, Input, RadioGroup, AdvancedRadio } from 'rizzui';
 import cn from '@/utils/class-names';
-import NoSSR from '@/components/no-ssr';
+// import NoSSR from '@/components/no-ssr';
 import FormGroup from '@/app/shared/form-group';
 import {
   paidBy,
@@ -28,7 +28,7 @@ export default function FormPaymentMethodInfo({
       description="Add Payment Method information here"
       className={cn(className)}
     >
-      <NoSSR>
+      {/* <NoSSR> */}
         <Controller
           name="paidBy"
           control={control}
@@ -68,7 +68,7 @@ export default function FormPaymentMethodInfo({
             />
           )}
         />
-      </NoSSR>
+      {/* </NoSSR> */}
       <Controller
         name="paymentType"
         control={control}
@@ -110,7 +110,7 @@ export default function FormPaymentMethodInfo({
         {...register('payeeName')}
         error={errors.payeeName?.message as string}
       />
-      <NoSSR>
+      {/* <NoSSR> */}
         <Controller
           control={control}
           name="payeeCountry"
@@ -131,7 +131,7 @@ export default function FormPaymentMethodInfo({
             />
           )}
         />
-      </NoSSR>
+      {/* </NoSSR> */}
       <Input
         label="City"
         placeholder="City"

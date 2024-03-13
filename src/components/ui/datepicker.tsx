@@ -12,7 +12,7 @@ const calendarContainerClasses = {
   },
 };
 
-const prevNextButtonClasses = {
+const prevNextButtonClasses = { 
   base: '[&.react-datepicker>button]:items-baseline [&.react-datepicker>button]:top-7',
   border:
     '[&.react-datepicker>button]:border [&.react-datepicker>button]:border-solid [&.react-datepicker>button]:border-gray-300 [&.react-datepicker>button]:rounded-md',

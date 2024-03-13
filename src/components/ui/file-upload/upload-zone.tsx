@@ -11,7 +11,7 @@ import {
   UploadFileResponse,
   generateClientDropzoneAccept,
 } from 'uploadthing/client';
-import { useUploadThing } from '@/utils/uploadthing';
+// import { useUploadThing } from '@/utils/uploadthing';
 import { Button, Text, FieldError } from 'rizzui';
 import cn from '@/utils/class-names';
 import UploadIcon from '@/components/shape/upload';
@@ -78,41 +78,41 @@ export default function UploadZone({
       )
   );
 
-  const { startUpload, permittedFileInfo, isUploading } = useUploadThing(
-    'generalMedia',
-    {
-      onClientUploadComplete: (res: UploadFileResponse<any>[] | undefined) => {
-        console.log('res', res);
-        if (setValue) {
-          // const respondedUrls = res?.map((r) => r.url);
-          setFiles([]);
-          const respondedUrls = res?.map((r) => ({
-            name: r.name,
-            size: r.size,
-            url: r.url,
-          }));
-          setValue(name, respondedUrls);
-        }
-        toast.success(
-          <Text as="b" className="font-semibold">
-            portfolio Images updated
-          </Text>
-        );
-      },
-      onUploadError: (error: Error) => {
-        console.error(error);
-        toast.error(error.message);
-      },
-    }
-  );
+  // const { startUpload, permittedFileInfo, isUploading } = useUploadThing(
+  //   'generalMedia',
+  //   {
+  //     onClientUploadComplete: (res: UploadFileResponse<any>[] | undefined) => {
+  //       console.log('res', res);
+  //       if (setValue) {
+  //         // const respondedUrls = res?.map((r) => r.url);
+  //         setFiles([]);
+  //         const respondedUrls = res?.map((r) => ({
+  //           name: r.name,
+  //           size: r.size,
+  //           url: r.url,
+  //         }));
+  //         setValue(name, respondedUrls);
+  //       }
+  //       toast.success(
+  //         <Text as="b" className="font-semibold">
+  //           portfolio Images updated
+  //         </Text>
+  //       );
+  //     },
+  //     onUploadError: (error: Error) => {
+  //       console.error(error);
+  //       toast.error(error.message);
+  //     },
+  //   }
+  // );
 
-  const fileTypes = permittedFileInfo?.config
-    ? Object.keys(permittedFileInfo?.config)
-    : [];
+  // const fileTypes = permittedFileInfo?.config
+  //   ? Object.keys(permittedFileInfo?.config)
+  //   : [];
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop,
-    accept: fileTypes ? generateClientDropzoneAccept(fileTypes) : undefined,
+  //  accept: fileTypes ? generateClientDropzoneAccept(fileTypes) : undefined,
   });
 
   return (
@@ -142,11 +142,11 @@ export default function UploadZone({
           <UploadIcon className="h-12 w-12" />
           <Text className="text-base font-medium">Drop or select file</Text>
         </div>
-
+{/* 
         {!isEmpty(files) && !isEmpty(notUploadedItems) && (
           <UploadButtons
             files={notUploadedItems}
-            isLoading={isUploading}
+           // isLoading={isUploading}
             onClear={() => setFiles([])}
             onUpload={() => startUpload(notUploadedItems)}
           />
@@ -155,12 +155,12 @@ export default function UploadZone({
         {isEmpty(files) && !isEmpty(notUploadedItems) && (
           <UploadButtons
             files={notUploadedItems}
-            isLoading={isUploading}
+           // isLoading={isUploading}
             onClear={() => setFiles([])}
             onUpload={() => startUpload(notUploadedItems)}
           />
-        )}
-
+        )} */}
+{/* 
         {!isEmpty(files) && isEmpty(notUploadedItems) && (
           <UploadButtons
             files={files}
@@ -168,7 +168,7 @@ export default function UploadZone({
             onClear={() => setFiles([])}
             onUpload={() => startUpload(files)}
           />
-        )}
+        )} */}
       </div>
 
       {(!isEmpty(uploadedItems) || !isEmpty(notUploadedItems)) && (
@@ -190,7 +190,7 @@ export default function UploadZone({
           {notUploadedItems.map((file: any, index: number) => (
             <div key={index} className={cn('relative')}>
               <figure className="group relative h-40 rounded-md bg-gray-50">
-                <MediaPreview name={file.name} url={file.preview} />
+                {/* <MediaPreview name={file.name} url={file.preview} />
                 {isUploading ? (
                   <div className="absolute inset-0 z-50 grid place-content-center rounded-md bg-gray-800/50">
                     <LoadingSpinner />
@@ -203,7 +203,7 @@ export default function UploadZone({
                   >
                     <PiTrashBold className="text-white" />
                   </button>
-                )}
+                )} */}
               </figure>
               <MediaCaption name={file.path} size={file.size} />
             </div>

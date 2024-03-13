@@ -166,6 +166,7 @@ export default function PhoneInfo({ className }: { className?: string }) {
     <ul key={data2?.BREACHES.COUNT} style={{ marginTop: '10px' }}>
       {data2.BREACHES.DETAILS.map((breach, index) => (
                      <div
+                     key={breach.DOMAIN}
                      className="mb-4 flex items-center justify-between last:mb-0 last:border-0 last:pb-0"
                    >
                <div className="flex items-center justify-start gap-2" >
@@ -214,6 +215,7 @@ export default function PhoneInfo({ className }: { className?: string }) {
             <ul style={{ marginTop: '10px' }}>
       {data2.ONLINE_PROFILES.DETAILS.map((onlne, index) => (
                <div
+               key={onlne.DOMAIN}
                className="mb-4 flex items-center justify-between last:mb-0 last:border-0 last:pb-0"
              >
          <div className="flex items-center justify-start gap-2" >

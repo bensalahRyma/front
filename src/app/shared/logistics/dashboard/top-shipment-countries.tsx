@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import WorldMap from 'react-svg-worldmap';
+// import WorldMap from 'react-svg-worldmap';
 import WidgetCard from '@/components/cards/widget-card';
 import { Text, Badge } from 'rizzui';
 import cn from '@/utils/class-names';
@@ -51,7 +51,7 @@ export default function TopShipmentCountries({
         ref={ref}
         className="col-span-full [&_figure]:!bg-transparent [&_svg]:dark:invert"
       >
-        <WorldMap color="#028ca6" valueSuffix="%" size={width} data={data} />
+        {/* <WorldMap color="#028ca6" valueSuffix="%" size={width} data={data} /> */}
       </div>
 
       <div className="col-span-full -mx-5 border-t border-dashed border-muted px-5 pt-5 lg:-mx-7 lg:px-7">

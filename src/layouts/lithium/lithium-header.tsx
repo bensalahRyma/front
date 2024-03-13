@@ -7,9 +7,9 @@ import SearchWidget from '@/components/search/search';
 import MessagesDropdown from '@/layouts/messages-dropdown';
 import NotificationDropdown from '@/layouts/notification-dropdown';
 import ProfileMenu from '@/layouts/profile-menu';
-import SettingsButton from '@/components/settings/settings-button';
+// import SettingsButton from '@/components/settings/settings-button';
 import HamburgerButton from '@/layouts/hamburger-button';
-import Logo from '@/components/logo';
+// import Logo from '@/components/logo';
 import {
   PiBellSimpleRingingDuotone,
   PiChatsCircleDuotone,
@@ -57,9 +57,9 @@ function HeaderMenuRight() {
           />
         </ActionIcon>
       </NotificationDropdown>
-      <SettingsButton className="rounded-full text-gray-700 shadow-none backdrop-blur-none hover:text-gray-1000 3xl:h-10 3xl:w-10 dark:bg-gray-100/0">
+      {/* <SettingsButton className="rounded-full text-gray-700 shadow-none backdrop-blur-none hover:text-gray-1000 3xl:h-10 3xl:w-10 dark:bg-gray-100/0">
         <PiGearDuotone className="h-[22px] w-auto animate-spin-slow" />
-      </SettingsButton>
+      </SettingsButton> */}
       <ProfileMenu
         buttonClassName="w-auto sm:w-auto p-1 border border-gray-300"
         avatarClassName="!w-7 !h-7 sm:!h-8 sm:!w-8"
@@ -79,7 +79,7 @@ export default function Header() {
           href={'/'}
           className="me-4 hidden w-[155px] shrink-0 text-gray-800 hover:text-gray-900 lg:me-5 xl:block"
         >
-          <Logo className="max-w-[155px]" />
+          {/* <Logo className="max-w-[155px]" /> */}
         </Link>
         <HeaderMenuLeft />
       </div>
@@ -93,7 +93,7 @@ export default function Header() {
             href={'/'}
             className="me-4 w-9 shrink-0 text-gray-800 hover:text-gray-900 lg:me-5 xl:hidden"
           >
-            <Logo iconOnly={true} />
+            {/* <Logo iconOnly={true} /> */}
           </Link>
           <SearchWidget
             icon={<PiMagnifyingGlassDuotone className="h-[20px] w-[20px]" />}

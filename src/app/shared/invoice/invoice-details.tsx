@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { QRCodeSVG } from 'qrcode.react';
+// import { QRCodeSVG } from 'qrcode.react';
 import { Badge, Title, Text } from 'rizzui';
 import Table from '@/components/ui/table';
 import { siteConfig } from '@/config/site.config';
@@ -109,7 +109,7 @@ export default function InvoiceDetails() {
     <div className="w-full rounded-xl border border-muted p-5 text-sm sm:p-6 lg:p-8 2xl:p-10">
       <div className="mb-12 flex flex-col-reverse items-start justify-between md:mb-16 md:flex-row">
         <Image
-          src={siteConfig.logo}
+          src={''}
           alt={siteConfig.title}
           className="dark:invert"
           priority
@@ -167,10 +167,10 @@ export default function InvoiceDetails() {
         </div>
 
         <div className="mt-4 flex sm:mt-6 md:mt-0 md:justify-end">
-          <QRCodeSVG
+          {/* <QRCodeSVG
             value="https://reactjs.org/"
             className="h-28 w-28 lg:h-32 lg:w-32"
-          />
+          /> */}
         </div>
       </div>
 

@@ -13,7 +13,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { PiCaretDownBold } from 'react-icons/pi';
 import SimpleBar from '@/components/ui/simplebar';
-import StatusBadge from '@/components/get-status-badge';
+// import StatusBadge from '@/components/get-status-badge';
 import { useColorPresetName } from '@/hooks/use-theme-color';
 
 function LinkMenuItem({ item }: { item: ItemType }) {
@@ -39,7 +39,7 @@ function LinkMenuItem({ item }: { item: ItemType }) {
         </span>
         <span className="truncate">{item.name}</span>
       </div>
-      {item?.badge?.length ? <StatusBadge status={item?.badge} /> : null}
+      {/* {item?.badge?.length ? <StatusBadge status={item?.badge} /> : null} */}
     </Link>
   );
 }
@@ -117,9 +117,9 @@ function CollapsibleMenuItem({ item }: { item: ItemType }) {
               />
               <span className="truncate">{subMenuItem?.name}</span>
             </div>
-            {subMenuItem?.badge?.length ? (
+            {/* {subMenuItem?.badge?.length ? (
               <StatusBadge status={subMenuItem?.badge} />
-            ) : null}
+            ) : null} */}
           </Link>
         );
       })}

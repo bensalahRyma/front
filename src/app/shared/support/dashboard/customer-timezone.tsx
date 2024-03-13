@@ -1,6 +1,6 @@
 'use client';
 
-import WorldMap from 'react-svg-worldmap';
+// import WorldMap from 'react-svg-worldmap';
 import { Text, Badge } from 'rizzui';
 import cn from '@/utils/class-names';
 import { useMeasure } from '@/hooks/use-measure';
@@ -30,12 +30,12 @@ export default function CustomerTimezone({
         ref={ref}
         className="flex items-center justify-center [&_figure]:!bg-transparent [&_svg]:dark:invert"
       >
-        <WorldMap
+        {/* <WorldMap
           color="#028ca6"
           valueSuffix="%"
           size={isWide ? 'lg' : width}
           data={data}
-        />
+        /> */}
       </div>
 
       <div className="offset-height h-24 xs:h-20 lg:h-14 3xl:h-12" />

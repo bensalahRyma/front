@@ -12,7 +12,7 @@ import {
   brandsData,
   colorsData,
 } from '@/app/shared/ecommerce/shop/shop-filters/filter-utils';
-import FilterWithSearch from '@/components/filter-with-search';
+// import FilterWithSearch from '@/components/filter-with-search';
 import { PiXBold } from 'react-icons/pi';
 import hasSearchedParams from '@/utils/has-searched-params';
 
@@ -41,7 +41,7 @@ export default function ShopFilters() {
 
       <div className="custom-scrollbar h-[calc(100vh-136px)] space-y-9 overflow-y-auto px-5 py-6">
         <GenderSpecificFilter state={state} applyFilter={applyFilter} />
-        <FilterWithSearch
+        {/* <FilterWithSearch
           title="Category"
           name="categories"
           data={categoriesData}
@@ -64,7 +64,7 @@ export default function ShopFilters() {
           state={state}
           applyFilter={applyFilter}
           clearFilter={clearFilter}
-        />
+        /> */}
         <PriceFilter state={state} applyFilter={applyFilter} />
         <RatingFilter state={state} applyFilter={applyFilter} />
       </div>

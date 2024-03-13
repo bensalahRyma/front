@@ -8,8 +8,8 @@ import cn from '@/utils/class-names';
 import { PiCaretDownBold } from 'react-icons/pi';
 import SimpleBar from '@/components/ui/simplebar';
 import { berylliumSidebarMenuItems } from '@/layouts/beryllium/beryllium-sidebar-menu-items';
-import Logo from '@/components/logo';
-import StatusBadge from '@/components/get-status-badge';
+// import Logo from '@/components/logo';
+// import StatusBadge from '@/components/get-status-badge';
 
 export default function Sidebar({ className }: { className?: string }) {
   const pathname = usePathname();
@@ -26,7 +26,7 @@ export default function Sidebar({ className }: { className?: string }) {
           aria-label="Site Logo"
           className="text-gray-800 hover:text-gray-900"
         >
-          <Logo className="max-w-[155px]" />
+          {/* <Logo className="max-w-[155px]" /> */}
         </Link>
       </div>
 
@@ -111,7 +111,8 @@ export default function Sidebar({ className }: { className?: string }) {
                                 </span>
                               </div>
                               {dropdownItem?.badge?.length ? (
-                                <StatusBadge status={dropdownItem?.badge} />
+                                <></>
+                                // <StatusBadge status={dropdownItem?.badge} />
                               ) : null}
                             </Link>
                           );
@@ -142,9 +143,9 @@ export default function Sidebar({ className }: { className?: string }) {
                           )}
                           <span className="truncate">{item.name}</span>
                         </div>
-                        {item?.badge?.length ? (
-                          <StatusBadge status={item?.badge} />
-                        ) : null}
+                        {/* {item?.badge?.length ? (
+                         <></>
+                        ) : null} */}
                       </Link>
                     )}
                   </>

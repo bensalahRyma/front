@@ -189,7 +189,7 @@ export default function Popover({
         placement: popover.floating.placement,
         trapFocus,
         withinPortal,
-        portalProps,
+        // portalProps,
         onClose: popover.onClose,
         onToggle: popover.onToggle,
         getTargetId: () => `rizzui${uid}-target`,

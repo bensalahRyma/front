@@ -4,11 +4,11 @@ import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { usePathname } from 'next/navigation';
 import { PiShoppingCartBold } from 'react-icons/pi';
-import { useCart } from '@/store/quick-cart/cart.context';
+// import { useCart } from '@/store/quick-cart/cart.context';
 import { routes } from '@/config/routes';
 import cn from '@/utils/class-names';
 import { DUMMY_ID } from '@/config/constants';
-import CartDrawerView from './ecommerce/cart/cart-drawer-view';
+// import CartDrawerView from './ecommerce/cart/cart-drawer-view';
 
 const Drawer = dynamic(() => import('rizzui').then((module) => module.Drawer), {
   ssr: false,
@@ -21,14 +21,14 @@ interface FloatingCartProps {
 export default function FloatingCart({ className }: FloatingCartProps) {
   const pathname = usePathname();
   const [openDrawer, setOpenDrawer] = useState(false);
-  const {
-    totalItems,
-    items,
-    total,
-    addItemToCart,
-    removeItemFromCart,
-    clearItemFromCart,
-  } = useCart();
+  // const {
+  //   totalItems,
+  //   items,
+  //   total,
+  //   addItemToCart,
+  //   removeItemFromCart,
+  //   clearItemFromCart,
+  // } = useCart();
 
   // Check if this page belongs to ecommerce.
   const isECom = pathname.includes('ecommerce');
@@ -50,7 +50,7 @@ export default function FloatingCart({ className }: FloatingCartProps) {
     isECom &&
     !isPathExcluded && (
       <>
-        <button
+        {/* <button
           className={cn(
             'fixed right-2 top-1/2 z-20 grid -translate-y-1/2  place-content-center gap-1 rounded-md bg-primary p-3 text-xs font-semibold text-white shadow-[0_25px_50px_-12px_#000000]',
             className
@@ -76,7 +76,7 @@ export default function FloatingCart({ className }: FloatingCartProps) {
             items={items}
             total={total}
           />
-        </Drawer>
+        </Drawer> */}
       </>
     )
   );

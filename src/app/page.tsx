@@ -13,7 +13,7 @@ export default function Home() {
         name: 'Home',
       },
       {
-        href: routes.dashbord,
+        href: routes.dashboard,
         name: 'dashboard',
       }
     ],

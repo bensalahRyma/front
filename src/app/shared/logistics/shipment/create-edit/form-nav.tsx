@@ -1,4 +1,4 @@
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 import cn from '@/utils/class-names';
 import SimpleBar from '@/components/ui/simplebar';
 
@@ -47,7 +47,7 @@ export default function FormNav({ className }: FormNavProps) {
     >
       <SimpleBar>
         <div className="inline-grid grid-flow-col gap-5 md:gap-7 lg:gap-10">
-          {menuItems.map((tab, idx) => (
+          {/* {menuItems.map((tab, idx) => (
             <Link
               key={tab.value}
               to={tab.value}
@@ -61,7 +61,7 @@ export default function FormNav({ className }: FormNavProps) {
             >
               {tab.label}
             </Link>
-          ))}
+          ))} */}
         </div>
       </SimpleBar>
     </div>

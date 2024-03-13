@@ -3,7 +3,7 @@
 import type { CalendarEvent } from '@/types';
 import dayjs from 'dayjs';
 import { useCallback, useMemo } from 'react';
-import { Calendar, dayjsLocalizer } from 'react-big-calendar';
+// import { Calendar, dayjsLocalizer } from 'react-big-calendar';
 import EventForm from '@/app/shared/event-calendar/event-form';
 import DetailsEvents from '@/app/shared/event-calendar/details-event';
 import { useModal } from '@/app/shared/modal-views/use-modal';
@@ -11,7 +11,7 @@ import useEventCalendar from '@/hooks/use-event-calendar';
 import cn from '@/utils/class-names';
 import { useColorPresetName } from '@/hooks/use-theme-color';
 
-const localizer = dayjsLocalizer(dayjs);
+// const localizer = dayjsLocalizer(dayjs);
 
 const calendarToolbarClassName =
   '[&_.rbc-toolbar_.rbc-toolbar-label]:whitespace-nowrap [&_.rbc-toolbar_.rbc-toolbar-label]:my-2 [&_.rbc-toolbar]:flex [&_.rbc-toolbar]:flex-col [&_.rbc-toolbar]:items-center @[56rem]:[&_.rbc-toolbar]:flex-row [&_.rbc-btn-group_button:hover]:bg-gray-300 [&_.rbc-btn-group_button]:duration-200 [&_.rbc-btn-group_button.rbc-active:hover]:bg-gray-600 dark:[&_.rbc-btn-group_button.rbc-active:hover]:bg-gray-300 [&_.rbc-btn-group_button.rbc-active:hover]:text-gray-50 dark:[&_.rbc-btn-group_button.rbc-active:hover]:text-gray-900 [@media(max-width:375px)]:[&_.rbc-btn-group:last-child_button]:!px-2.5 [&_.rbc-toolbar_>_*:last-child_>_button:focus]:!bg-primary [&_.rbc-toolbar_>_*:last-child_>_button:focus]:!text-gray-0 dark:[&_.rbc-toolbar_>_*:last-child_>_button:focus]:!text-gray-900 [&_.rbc-toolbar_>_*:last-child_>_button:hover]:!text-gray-900 dark:[&_.rbc-toolbar_>_*:last-child_>_button:hover]:!bg-gray-300 [&_.rbc-toolbar_>_*:last-child_>_button:hover]:!bg-gray-300 [&_.rbc-toolbar_>_*:last-child_>_button.rbc-active:hover]:!bg-primary-dark [&_.rbc-toolbar_>_*:last-child_>_button.rbc-active:hover]:!text-gray-0 dark:[&_.rbc-toolbar_>_*:last-child_>_button.rbc-active:hover]:!text-gray-900';
@@ -68,7 +68,7 @@ export default function EventCalendarView() {
 
   return (
     <div className="@container">
-      <Calendar
+      {/* <Calendar
         localizer={localizer}
         events={events}
         views={views}
@@ -85,7 +85,7 @@ export default function EventCalendarView() {
           calendarToolbarClassName,
           colorPresetName === 'black' && rtcEventClassName
         )}
-      />
+      /> */}
     </div>
   );
 }

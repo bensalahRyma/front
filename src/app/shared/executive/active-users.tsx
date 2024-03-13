@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type ComponentProps } from 'react';
 import WidgetCard from '@/components/cards/widget-card';
-import WorldMap, { type CountryContext } from 'react-svg-worldmap';
+// import WorldMap, { type CountryContext } from 'react-svg-worldmap';
 import { useElementSize } from '@/hooks/use-element-size';
 import { Badge, Text, Loader } from 'rizzui';
 import cn from '@/utils/class-names';
@@ -34,22 +34,22 @@ function createTextLabels(width: number) {
   return labels;
 }
 
-const getSCustomStyle = ({
-  countryValue,
-  countryCode,
-  minValue,
-  maxValue,
-  color,
-}: CountryContext) => ({
-  fill: countryCode === 'US' ? '#0A3161' : color,
-  fillOpacity: countryValue
-    ? 0.1 + (1.5 * (countryValue - minValue)) / (maxValue - minValue)
-    : 0,
-  stroke: 'green',
-  strokeWidth: 1,
-  strokeOpacity: 0.2,
-  cursor: 'pointer',
-});
+// const getSCustomStyle = ({
+//   countryValue,
+//   countryCode,
+//   minValue,
+//   maxValue,
+//   color,
+// }: CountryContext) => ({
+//   fill: countryCode === 'US' ? '#0A3161' : color,
+//   fillOpacity: countryValue
+//     ? 0.1 + (1.5 * (countryValue - minValue)) / (maxValue - minValue)
+//     : 0,
+//   stroke: 'green',
+//   strokeWidth: 1,
+//   strokeOpacity: 0.2,
+//   cursor: 'pointer',
+// });
 
 export default function ActiveUsers({ className }: { className?: string }) {
   const [ref, { width }] = useElementSize();
@@ -81,14 +81,15 @@ export default function ActiveUsers({ className }: { className?: string }) {
             <Loader variant="spinner" size="lg" />
           </div>
         ) : (
-          <WorldMap
-            color="red"
-            valueSuffix="%"
-            size={is4k ? 'xl' : width}
-            data={data}
-            textLabelFunction={createTextLabels}
-            styleFunction={getSCustomStyle}
-          />
+          <></>
+          // <WorldMap
+          //   color="red"
+          //   valueSuffix="%"
+          //   size={is4k ? 'xl' : width}
+          //   data={data}
+          //   textLabelFunction={createTextLabels}
+          //   styleFunction={getSCustomStyle}
+          // />
         )}
       </div>
 

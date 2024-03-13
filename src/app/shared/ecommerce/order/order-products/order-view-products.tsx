@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Table, { HeaderCell } from '@/components/ui/table';
-import { useCart } from '@/store/quick-cart/cart.context';
+// import { useCart } from '@/store/quick-cart/cart.context';
 import { Title, Text } from 'rizzui';
 import { toCurrency } from '@/utils/to-currency';
 import { CartItem } from '@/types';
@@ -65,16 +65,9 @@ const columns = [
 ];
 
 export default function OrderViewProducts() {
-  const { items } = useCart();
+
   return (
-    <Table
-      data={items}
-      // @ts-ignore
-      columns={columns}
-      className="text-sm"
-      variant="minimal"
-      rowKey={(record) => record.id}
-      scroll={{ x: 800 }}
-    />
+    <>
+    </>
   );
 }

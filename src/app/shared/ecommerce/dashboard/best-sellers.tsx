@@ -6,7 +6,7 @@ import { DatePicker } from '@/components/ui/datepicker';
 import WidgetCard from '@/components/cards/widget-card';
 import { Button, Text } from 'rizzui';
 import { topProducts } from '@/data/top-products-data';
-import Rating from '@/components/rating';
+// import Rating from '@/components/rating';
 
 const currentDate = new Date();
 const previousMonthDate = new Date(
@@ -77,7 +77,7 @@ export default function BestSellers({ className }: { className?: string }) {
                 <Text className="text-gray-500">{product.price}</Text>
               </div>
               <div>
-                <Rating rating={product.rating} />
+                {/* <Rating rating={product.rating} /> */}
               </div>
             </div>
           </div>

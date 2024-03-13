@@ -81,12 +81,12 @@ export default function EditProfileForm({ className }: EditProfileFormProps) {
         }) => {
           return (
             <>
-              <AvatarUpload
+              {/* <AvatarUpload
                 name="avatar"
                 setValue={setValue}
                 getValues={getValues}
                 className="col-span-full"
-              />
+              /> */}
               <UploadZone
                 label="Cover Photo"
                 name="coverPhoto"

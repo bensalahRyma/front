@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import WishlistButton from '@/components/wishlist-button';
+// import WishlistButton from '@/components/wishlist-button';
 import { generateSlug } from '@/utils/generate-slug';
 import { Title, Text } from 'rizzui';
 import { routes } from '@/config/routes';
@@ -42,7 +42,7 @@ export default function ProductMinimalCard({
             className="h-full w-full object-cover"
           />
         </div>
-        <WishlistButton className="absolute end-3 top-3" />
+        {/* <WishlistButton className="absolute end-3 top-3" /> */}
       </div>
 
       <div className="pt-3.5">

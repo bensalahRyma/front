@@ -54,12 +54,12 @@ export const berylliumSidebarMenuItems = [
     href: '/',
     icon: <PiFolderNotch />,
   },
-  {
-    name: 'Appointment',
-    href: routes.appointment.dashboard,
-    icon: <PiCalendarDuotone />,
-    badge: 'NEW',
-  },
+  // {
+  //   name: 'Appointment',
+  //   href: routes.appointment.dashboard,
+  //   icon: <PiCalendarDuotone />,
+  //   badge: 'NEW',
+  // },
   {
     name: 'Executive',
     href: routes.executive.dashboard,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { OptionalPortal } from '@/components/Portal';
+// import { OptionalPortal } from '@/components/Portal';
 import cn from '@/utils/class-names';
 import { useFocusReturn } from '@/components/ui/menu/popover/use-focus-return';
 import { usePopoverContext } from '@/components/ui/menu/popover/popover-context';
@@ -109,37 +109,39 @@ export const PopoverContent = React.forwardRef<
     }
 
     return (
-      <OptionalPortal {...ctx.portalProps} withinPortal={ctx.withinPortal}>
-        {ctx.opened && (
-          <Component
-            {...accessibleProps}
-            {...props}
-            variant={variant}
-            ref={mergedRef}
-            onKeyDownCapture={closeOnEscape(ctx.onClose, {
-              active: ctx.closeOnEscape,
-              onTrigger: returnFocus,
-              onKeyDown: onKeyDown,
-            })}
-            data-position={ctx.placement}
-            style={{
-              top: ctx.y ?? 0,
-              left: ctx.x ?? 0,
-              width: ctx.width === 'target' ? undefined : ctx.width,
-            }}
-            className={cn(
-              className,
-              popoverStyle.base,
-              popoverStyle.shadow[shadow],
-              // @ts-ignore
-              popoverStyle.size[size],
-              popoverStyle.rounded[rounded]
-            )}
-          >
-            {children}
-          </Component>
-        )}
-      </OptionalPortal>
+      <>
+      </>
+      // <OptionalPortal {...ctx.portalProps} withinPortal={ctx.withinPortal}>
+      //   {ctx.opened && (
+      //     <Component
+      //       {...accessibleProps}
+      //       {...props}
+      //       variant={variant}
+      //       ref={mergedRef}
+      //       onKeyDownCapture={closeOnEscape(ctx.onClose, {
+      //         active: ctx.closeOnEscape,
+      //         onTrigger: returnFocus,
+      //         onKeyDown: onKeyDown,
+      //       })}
+      //       data-position={ctx.placement}
+      //       style={{
+      //         top: ctx.y ?? 0,
+      //         left: ctx.x ?? 0,
+      //         width: ctx.width === 'target' ? undefined : ctx.width,
+      //       }}
+      //       className={cn(
+      //         className,
+      //         popoverStyle.base,
+      //         popoverStyle.shadow[shadow],
+      //         // @ts-ignore
+      //         popoverStyle.size[size],
+      //         popoverStyle.rounded[rounded]
+      //       )}
+      //     >
+      //       {children}
+      //     </Component>
+      //   )}
+      // </OptionalPortal>
     );
   }
 );

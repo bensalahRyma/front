@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 import { Title, Text } from 'rizzui';
 import cn from '@/utils/class-names';
 import { PiArrowDownBold, PiTriangle } from 'react-icons/pi';
@@ -85,7 +85,7 @@ export default function Timeline({
       {showmoreButton && (
         <div className="flex items-center" ref={buttonEl}>
           <div className="hidden w-[147px] flex-shrink-0 @lg:block"></div>
-          <Link
+          {/* <Link
             to={'tracking_history'}
             spy={true}
             hashSpy={true}
@@ -97,7 +97,7 @@ export default function Timeline({
           >
             View Travel History
             <PiArrowDownBold className="h-4 w-4 text-gray-500" />
-          </Link>
+          </Link> */}
         </div>
       )}
     </div>

@@ -65,7 +65,7 @@ export default function AuthWrapperFour({
         >
           <div className="flex flex-col items-center">
             <Link href={'/'} className="mb-7 inline-block max-w-[64px] lg:mb-9">
-              <Image src={siteConfig.icon} alt={siteConfig.title} />
+              {/* <Image src={''} alt={siteConfig.title} /> */}
             </Link>
             <Title
               as="h2"
@@ -108,7 +108,7 @@ function AuthHeader() {
     <header className="flex items-center justify-between p-4 lg:px-16 lg:py-6 2xl:px-24">
       <Link href={'/'}>
         <Image
-          src={siteConfig.logo}
+          src={''}
           alt={siteConfig.title}
           className="dark:invert"
           priority

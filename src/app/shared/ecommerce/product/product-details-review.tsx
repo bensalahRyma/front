@@ -5,7 +5,7 @@ import { Collapse } from 'rizzui';
 import cn from '@/utils/class-names';
 import ReviewCard from '@/components/cards/review-card';
 import ProductReviewForm from './product-review-form';
-import RatingProgressBar from '@/components/rating-progress-bar';
+// import RatingProgressBar from '@/components/rating-progress-bar';
 
 const reviewData = [
   {
@@ -68,7 +68,7 @@ function AverageRatings({
           <span>{totalReviews}</span> Verified Buyers
         </p>
       </div>
-      <div className="space-y-3 py-0.5 @lg:ps-10 @5xl:w-auto">
+      {/* <div className="space-y-3 py-0.5 @lg:ps-10 @5xl:w-auto">
         <RatingProgressBar
           label={5}
           ratingCount={3}
@@ -98,7 +98,7 @@ function AverageRatings({
           totalReviews={totalReviews!}
           progressBarClassName="bg-red"
         />
-      </div>
+      </div> */}
     </div>
   );
 }

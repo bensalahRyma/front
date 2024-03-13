@@ -290,10 +290,10 @@ export default function ResultName({ className, customerData }: Props) {
                     as="span"
                     className="font-lexend text-sm font-medium text-gray-900 dark:text-gray-700"
                 >
-                   Password hash    <Badge size="sm">{customerData[0]?.passwordHash?.length}</Badge>
+                   {/* Password hash    <Badge size="sm">{customerData[0]?.passwordHash}</Badge> */}
                 </Text>
                 </div>
-                <Text as="span">{customerData[0]?.passwordHash[0]?.passwordhash}</Text>
+                {/* <Text as="span">{customerData[0]?.passwordHash[0]?.passwordhash}</Text> */}
             </div>
             <div
             className="mb-4 flex items-center justify-between  pb-4 last:mb-0 last:border-0 last:pb-0"
@@ -377,15 +377,15 @@ export default function ResultName({ className, customerData }: Props) {
             <div
             className="mb-4 flex items-center justify-between  pb-4 last:mb-0 last:border-0 last:pb-0"
             >
-                <div className="flex items-center justify-start gap-2">
-                <Text
+                {/* <div className="flex items-center justify-start gap-2"> */}
+                {/* <Text
                     as="span"
                     className="font-lexend text-sm font-medium text-gray-900 dark:text-gray-700"
                 >
                   total Amounts  <Badge size="sm">{customerData[0]?.totalAmounts.length}</Badge>
                 </Text>
                 </div>
-                <Text as="span">{customerData[0]?.totalAmounts[0]?.total}$</Text>
+                <Text as="span">{customerData[0]?.totalAmounts[0]?.total}$</Text> */}
             </div>
             <div
             className="mb-4 flex items-center justify-between  pb-4 last:mb-0 last:border-0 last:pb-0"
@@ -477,6 +477,7 @@ export default function ResultName({ className, customerData }: Props) {
   <ul key={data2?.BREACHES.COUNT} style={{ marginTop: '10px' }}>
     {data2.BREACHES.DETAILS.map((breach, index) => (
                    <div
+                   key={breach.DOMAIN}
                    className="mb-4 flex items-center justify-between last:mb-0 last:border-0 last:pb-0"
                  >
              <div className="flex items-center justify-start gap-2" >
@@ -525,6 +526,8 @@ export default function ResultName({ className, customerData }: Props) {
           <ul style={{ marginTop: '10px' }}>
     {data2.ONLINE_PROFILES.DETAILS.map((onlne, index) => (
              <div
+
+             key={onlne.DOMAIN}
              className="mb-4 flex items-center justify-between last:mb-0 last:border-0 last:pb-0"
            >
        <div className="flex items-center justify-start gap-2" >
@@ -618,6 +621,7 @@ export default function ResultName({ className, customerData }: Props) {
     <ul key={data3?.BREACHES.COUNT} style={{ marginTop: '10px' }}>
       {data3.BREACHES.DETAILS.map((breach, index) => (
                      <div
+                     key={breach.DOMAIN}
                      className="mb-4 flex items-center justify-between last:mb-0 last:border-0 last:pb-0"
                    >
                <div className="flex items-center justify-start gap-2" >
@@ -666,6 +670,7 @@ export default function ResultName({ className, customerData }: Props) {
             <ul style={{ marginTop: '10px' }}>
       {data3.ONLINE_PROFILES.DETAILS.map((onlne, index) => (
                <div
+               key={onlne.DOMAIN}
                className="mb-4 flex items-center justify-between last:mb-0 last:border-0 last:pb-0"
              >
          <div className="flex items-center justify-start gap-2" >

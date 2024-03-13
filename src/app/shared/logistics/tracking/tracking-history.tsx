@@ -1,6 +1,6 @@
 'use client';
 
-import { Element } from 'react-scroll';
+// import { Element } from 'react-scroll';
 import { PiCheckCircle, PiCaretDownBold } from 'react-icons/pi';
 import { Collapse } from 'rizzui';
 import cn from '@/utils/class-names';
@@ -96,9 +96,9 @@ export default function TrackingHistory({ className }: { className?: string }) {
           </button>
         )}
       >
-        <Element name="tracking_history">
+        {/* <Element name="tracking_history">
           <Timeline className="mt-10" data={timelineData} />
-        </Element>
+        </Element> */}
       </Collapse>
     </>
   );
