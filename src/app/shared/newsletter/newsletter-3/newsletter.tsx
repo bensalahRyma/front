@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import cn from '@/utils/class-names';
-import Logo from '@public/newsletter-3.svg';
+// import Logo from '@public/newsletter-3.svg';
 import NewsLetterForm from '@/app/shared/newsletter/newsletter-3/newsletter-form';
 
 export default function NewsLetter({ className }: { className?: string }) {
@@ -17,7 +17,7 @@ export default function NewsLetter({ className }: { className?: string }) {
         <div className="w-full max-w-[640px]">
           <div className="relative mx-auto mb-6 h-20 w-20 @2xl:mb-8 @2xl:h-28 @2xl:w-28">
             <Image
-              src={Logo}
+              src={''}
               alt="newsletter"
               fill
               priority

@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import cn from '@/utils/class-names';
-import LogoLight from '@public/logo-short-light.svg';
-import Logo from '@public/logo-short.svg';
+// import LogoLight from '@public/logo-short-light.svg';
+// import Logo from '@public/logo-short.svg';
 import NewsLetterForm from './newsletter-form';
 
 export default function NewsLetter({ className }: { className?: string }) {
@@ -18,7 +18,7 @@ export default function NewsLetter({ className }: { className?: string }) {
         <div className="w-full max-w-[640px]">
           <div className="relative mx-auto mb-6 h-20 w-20 @2xl:mb-8 @2xl:h-28 @2xl:w-28">
             <Image
-              src={Logo}
+              src={''}
               alt="newsletter"
               fill
               priority
@@ -26,7 +26,7 @@ export default function NewsLetter({ className }: { className?: string }) {
               className="visible dark:invisible"
             />
             <Image
-              src={LogoLight}
+              src={''}
               alt="newsletter"
               fill
               priority
